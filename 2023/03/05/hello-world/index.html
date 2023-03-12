@@ -16,7 +16,7 @@
 <meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-03-05T11:57:09.146Z">
-<meta property="article:modified_time" content="2023-03-05T11:57:09.159Z">
+<meta property="article:modified_time" content="2023-03-12T07:59:38.953Z">
 <meta property="article:author" content="Just-Once">
 <meta name="twitter:card" content="summary">
   
@@ -63,17 +63,21 @@
 	        
 				<li><a href="/">随笔</a></li>
 	        
-				<li><a href="/categories">分类</a></li>
-	        
 				<li><a href="/archives">归档</a></li>
+	        
+				<li><a href="/categories">分类</a></li>
 	        
 			</ul>
 		</nav>
 		<nav>
-    			总文章数 2
+    			总文章数 3
 		</nav>
 		<nav class="header-smart-menu">
     		
+    			
+    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+            
     			
     			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
     			
@@ -111,7 +115,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
 <!-- // 这里div的样式是笔者自己修改过的，你可以直接使用APlayer官方的原配置：<div id="aplayer"></div> -->
 <div id="aplayer" style="position:absolute;left;0;bottom:0;"></div>
-<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+<script src="https://src.wangriyu.wang/lib/Aplayer/APlayer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
 <script>
   const ap = new APlayer({
@@ -120,7 +124,7 @@
     listFolded: true, //播放列表默认折叠
     listMaxHeight: 90, //播放列表最大高度
     order: 'list', //音频循环顺序, 可选值: 'list', 'random'
-    loop: 'none', //音频循环播放, 可选值: 'all', 'one', 'none'
+    loop: 'all', //音频循环播放, 可选值: 'all', 'one', 'none'
     theme: '#b7daff', //切换音频时的主题色e9e9e9，优先级低于audio.theme
     preload: 'metadata', //音频预加载，可选值: 'none', 'metadata', 'auto'
     mutex: true, //互斥，阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
@@ -240,9 +244,9 @@
 		        
 					<li style="width: 25%"><a href="/">随笔</a></li>
 		        
-					<li style="width: 25%"><a href="/categories">分类</a></li>
-		        
 					<li style="width: 25%"><a href="/archives">归档</a></li>
+		        
+					<li style="width: 25%"><a href="/categories">分类</a></li>
 		        
 				</ul>
 			</nav>
@@ -251,10 +255,6 @@
 	<div class="mobile-mask" style="display:none" q-show="isShow"></div>
 </nav>
 
-      <!--动态线条背景-->
-      <script type="text/javascript"
-         color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-      </script>
       <div id="wrapper" class="body-wrap">
         <div class="menu-l">
           <div class="canvas-wrap">
@@ -277,7 +277,7 @@
           <br/>
           <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
           <span class="icon-sort"></span>
-          <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+          <span style="color:#ef7522;font-size:14px;">
             阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
           </span>
           </a>
@@ -287,6 +287,7 @@
         <a href="/2023/03/05/hello-world/" class="archive-article-date">
   	<time datetime="2023-03-05T11:57:09.146Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-05</time>
 </a>
+
         
       </header>
     
@@ -296,6 +297,7 @@
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+ <span id="more"></span>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
@@ -308,7 +310,22 @@
 
       
       
-
+       
+         <div class="essayending">
+           <div>
+            <div style="text-align:center;color: #ccc;font-size:22px;">
+            <br/>
+            <br/>
+ -------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------
+            <br/>
+            <br/>
+             <br/>
+             <br/>
+            </div>
+           </div>
+         </div>
+         
+  
       
         <div class="page-reward">
           <a href="javascript:;" class="page-reward-btn tooltip-top">
@@ -345,12 +362,6 @@
     <div class="article-info article-info-index">
       
       
-      <!--显示阅读次数-->
-      
-        <a class="cloud-tie-join-count" href="/2023/03/05/hello-world/" style="color:gray;font-size:14px;">
-          <span id="busuanzi_container_page_pv">
-          </span>
-        </a>
       
       
 
@@ -416,11 +427,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2023/03/06/%E8%AE%B0%E5%BD%95%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2023/03/06/%E8%AE%B0%E5%BD%95%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          记录创建博客
+          记录使用Hexo搭建博客
         
       </div>
     </a>
@@ -441,6 +452,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -546,10 +570,10 @@
       	</div>
     </div>
     <div calss="count-span">
-      <span id="busuanzi_container_site_pv">
+      <span >
         总访问量: <span id="busuanzi_value_site_pv"></span>
       </span>
-      <span id="busuanzi_container_site_uv">
+      <span >
         总访客: <span id="busuanzi_value_site_uv"></span>
       </span>
     </div>
@@ -559,6 +583,8 @@
 <script type="text/javascript" src="/firework.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Justlovesmile/CDN/js/sakura.js"></script>
 <script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="https://github.com/hustcc/canvas-nest.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
 
     </div>
     <script>
@@ -570,9 +596,9 @@
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
-		toc_hide_index: true,
+		toc_hide_index: false,
 		root: "/",
-		innerArchive: false,
+		innerArchive: true,
 		showTags: false
 	}
 </script>
@@ -598,22 +624,89 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
       
     
+      
+      
+      
+    
     
 
     <ul style="width: 70%">
     
     
       
-      <li style="width: 50%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      
+        
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
   </div>
   <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">博客搭建</a>
+              </li>
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            3、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: false
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
+    	</section>
     
 
     
@@ -715,5 +808,9 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
   <script src="https://script-1256884783.file.myqcloud.com/cursor/explosion.min.js"></script>
   <!--pjax：防止跳转页面音乐暂停-->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script>
-</body>
+  <!--动态线条背景-->
+  <script type="text/javascript"
+   color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+  </script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
 </html>

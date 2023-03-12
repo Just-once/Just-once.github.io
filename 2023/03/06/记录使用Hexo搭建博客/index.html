@@ -6,17 +6,34 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Category: 技术积累 | Just-Once&#39; Blogs</title>
+  <title>记录使用Hexo搭建博客 | Just-Once&#39; Blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="To record a beautiful life !">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Just-Once&#39; Blogs">
-<meta property="og:url" content="http://example.com/categories/hexo/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/index.html">
+  <meta name="description" content="前言Hello！大家好，我是小小峰。 这是本人博客的第一篇文章，用来记录如何使用Hexo搭建基于Github的个人博客。 开学后不知不觉闲了下来，前两天受实验室学弟一天搭了两个网站的启发，忽然萌生了搭建自己博客的念头，这也是自己几年前就想做但由于不懂如何上手一直未做的事情，这次刚好借这个机会了结这个遗憾。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="记录使用Hexo搭建博客">
+<meta property="og:url" content="http://example.com/2023/03/06/%E8%AE%B0%E5%BD%95%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/index.html">
 <meta property="og:site_name" content="Just-Once&#39; Blogs">
-<meta property="og:description" content="To record a beautiful life !">
+<meta property="og:description" content="前言Hello！大家好，我是小小峰。 这是本人博客的第一篇文章，用来记录如何使用Hexo搭建基于Github的个人博客。 开学后不知不觉闲了下来，前两天受实验室学弟一天搭了两个网站的启发，忽然萌生了搭建自己博客的念头，这也是自己几年前就想做但由于不懂如何上手一直未做的事情，这次刚好借这个机会了结这个遗憾。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Just-once/BlogImages/Img/image-20230311161433733.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Just-once/BlogImages/Img/image-20230311152324320.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Just-once/BlogImages/Img/image-20230311152922316.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Just-once/BlogImages/Img/image-20230311161548386.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Just-once/BlogImages/Img/image-20230311162609696.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Just-once/BlogImages/Img/image-20230311164000845.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Just-once/BlogImages/Img/image-20230311164827861.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Just-once/BlogImages/Img/image-20230311214732961.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Just-once/BlogImages/Img/image-20230312150007459.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Just-once/BlogImages/Img/image-20230312150036914.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Just-once/BlogImages/Img/image-20230312145359597.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Just-once/BlogImages/Img/image-20230311220104861.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Just-once/BlogImages/Img/image-20230312150848830.png">
+<meta property="article:published_time" content="2023-03-06T04:37:19.000Z">
+<meta property="article:modified_time" content="2023-03-12T13:12:36.282Z">
 <meta property="article:author" content="Just-Once">
+<meta property="article:tag" content="博客搭建">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Just-once/BlogImages/Img/image-20230311161433733.png">
   
   
     <link rel="icon" href="/img/favicon.ico">
@@ -61,17 +78,21 @@
 	        
 				<li><a href="/">随笔</a></li>
 	        
-				<li><a href="/categories">分类</a></li>
-	        
 				<li><a href="/archives">归档</a></li>
+	        
+				<li><a href="/categories">分类</a></li>
 	        
 			</ul>
 		</nav>
 		<nav>
-    			总文章数 2
+    			总文章数 3
 		</nav>
 		<nav class="header-smart-menu">
     		
+    			
+    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+            
     			
     			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
     			
@@ -109,7 +130,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
 <!-- // 这里div的样式是笔者自己修改过的，你可以直接使用APlayer官方的原配置：<div id="aplayer"></div> -->
 <div id="aplayer" style="position:absolute;left;0;bottom:0;"></div>
-<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+<script src="https://src.wangriyu.wang/lib/Aplayer/APlayer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
 <script>
   const ap = new APlayer({
@@ -118,7 +139,7 @@
     listFolded: true, //播放列表默认折叠
     listMaxHeight: 90, //播放列表最大高度
     order: 'list', //音频循环顺序, 可选值: 'list', 'random'
-    loop: 'none', //音频循环播放, 可选值: 'all', 'one', 'none'
+    loop: 'all', //音频循环播放, 可选值: 'all', 'one', 'none'
     theme: '#b7daff', //切换音频时的主题色e9e9e9，优先级低于audio.theme
     preload: 'metadata', //音频预加载，可选值: 'none', 'metadata', 'auto'
     mutex: true, //互斥，阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
@@ -238,9 +259,9 @@
 		        
 					<li style="width: 25%"><a href="/">随笔</a></li>
 		        
-					<li style="width: 25%"><a href="/categories">分类</a></li>
-		        
 					<li style="width: 25%"><a href="/archives">归档</a></li>
+		        
+					<li style="width: 25%"><a href="/categories">分类</a></li>
 		        
 				</ul>
 			</nav>
@@ -249,89 +270,404 @@
 	<div class="mobile-mask" style="display:none" q-show="isShow"></div>
 </nav>
 
-      <!--动态线条背景-->
-      <script type="text/javascript"
-         color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-      </script>
       <div id="wrapper" class="body-wrap">
         <div class="menu-l">
           <div class="canvas-wrap">
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-记录使用Hexo搭建博客" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/06/%E8%AE%B0%E5%BD%95%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2023-03-06T04:37:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-06</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/06/%E8%AE%B0%E5%BD%95%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/">记录创建博客</a>
+    <h1 class="article-title" itemprop="name">
+      记录使用Hexo搭建博客
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        <!--显示阅读次数-->
+        
+          <br/>
+          <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+          <span class="icon-sort"></span>
+          <span style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+          </span>
+          </a>
+        
+        <!--显示阅读次数完毕-->
+        
+        <a href="/2023/03/06/%E8%AE%B0%E5%BD%95%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
+  	<time datetime="2023-03-06T04:37:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-06</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Hello！大家好，我是小小峰。</p>
+<p>这是本人博客的第一篇文章，用来记录如何使用Hexo搭建基于Github的个人博客。</p>
+<p>开学后不知不觉闲了下来，前两天受实验室学弟一天搭了两个网站的启发，忽然萌生了搭建自己博客的念头，这也是自己几年前就想做但由于不懂如何上手一直未做的事情，这次刚好借这个机会了结这个遗憾。</p>
+ <span id="more"></span>
+
+<p>刚开始考虑利用Hugo搭建，跟随B站视频无脑点击next，光速部署了一个个人展示主页，感觉求职时可能会有些作用，欢迎大家访问我的个人主页：<a target="_blank" rel="noopener" href="https://justonce.netlify.app/">Just-Once’s HomePage</a></p>
+<p>Hugo个人主页的搭建可以参考此视频学习<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Gz4y1f7Qj/?spm_id_from=333.1007.top_right_bar_window_history.content.click">零编程基础搭建个人主页 | 学术主页 | 网页制作 | Github妙用</a></p>
+<p>本博客的搭建基于Hexo，Hexo个人博客的搭建参考点击量超高的教程进行学习<a target="_blank" rel="noopener" href="https://www.cnblogs.com/huanhao/p/hexobase.html#github%E9%83%A8%E7%BD%B2">【基础篇】hexo博客搭建教程</a></p>
+<h1 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h1><h2 id="Nodejs-Git"><a href="#Nodejs-Git" class="headerlink" title="Nodejs + Git"></a>Nodejs + Git</h2><p>首先安装这两个软件，下载路径为：<a target="_blank" rel="noopener" href="https://nodejs.cn/download/">下载 | Node.js 中文网</a> 和 <a target="_blank" rel="noopener" href="https://git-scm.com/">Git(git-scm.com)</a></p>
+<p>如果安装过了的小伙伴直接跳过进行下一步。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Just-once/BlogImages/Img/image-20230311161433733.png" alt="image-20230311161433733"></p>
+<p>运行安装包，根据自己的需求选定合适的安装地址，在下一页的设定中保持原有设置，它会自动创建环境变量，十分方便，接着一路点击next等待安装完成。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Just-once/BlogImages/Img/image-20230311152324320.png" alt="image-20230311152324320"></p>
+<p>同理，Git的安装也大同小异，没有太多坑，网上教程无数，一路next等待安装完成。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Just-once/BlogImages/Img/image-20230311152922316.png" alt="image-20230311152922316"></p>
+<p>安装完成后可以验证一下，按下键盘<code>Window 键 + R</code>，键入<code>cmd</code>按下回车，在任意命令行输入如下指令：</p>
+<blockquote>
+<p>node -v<br>npm -v<br>git -v</p>
+</blockquote>
+<p>如果没问题应该和我图中显示的内容类似。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Just-once/BlogImages/Img/image-20230311161548386.png" alt="image-20230311161548386"></p>
+<p>这里大家请注意node的版本，官网下载的node 16往后的版本都是可以的，版本的要求源于图片上传问题，详情可以查看下一个博客教程。</p>
+<p>【由于我们需要搭建的是个人博客，必然会涉及到md文件的上传，里面必然会包含图片，可是使用Typora的图片都是保存在本地的，所以直接上传一个包含博客内容的md文件，别人访问博客时是看不到图片的，那该如何解决呢？&#x3D;&#x3D;&gt; 这就需要配置图床了，将图片上传到云空间，从而给每张图片生成一个链接，这样就可以任意访问了】</p>
+<h2 id="cnmp"><a href="#cnmp" class="headerlink" title="cnmp"></a>cnmp</h2><p>接下来安装cnmp，通过国内镜像进行安装。（Tips：个人后续利用npm安装博客特效插件时出现了些小问题，通过cnmp安装成功解决，感觉cnmp还是有些用的，如果不安装的话，后续的Hexo相关操作会出现些小bug。）</p>
+<blockquote>
+<p>npm install -g cnpm –registry&#x3D;<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
+</blockquote>
+<p>安装完成后通过以下指令进行验证，如果出现下图类似的版本信息意味着安装完成了。</p>
+<blockquote>
+<p> cnpm -v</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Just-once/BlogImages/Img/image-20230311162609696.png" alt="image-20230311162609696"></p>
+<h2 id="Typora（推荐）"><a href="#Typora（推荐）" class="headerlink" title="Typora（推荐）"></a>Typora（推荐）</h2><p>Typora是一个markdown【md】编辑器，是非常好用的记录工具，本博客就是利用此软件进行编写的，这里推荐的原因是因为编辑博客内容必然要编写md文件，所以利用此软件进行编辑非常的方便和快捷，下一篇博客将会介绍如何配置Github图床，欢迎大家阅读。</p>
+<p>现在的Typora是收费软件，可在其官网下载：<a target="_blank" rel="noopener" href="https://typora.io/">Typora — a markdown editor, markdown reader</a>，也可在网上找到诸多免费资源，如：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/510731592">Typora免费版，Typora最后一个免费版，安装包合集 - 知乎 (zhihu.com)</a>，当然有能力的小伙伴还是支持下正版。</p>
+<h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h1><p>在完成上述准备工作后，就可以安装Hexo了，首先创建一个英文名的博客文件夹，在文件夹下右键，打开Git Bash Here，执行以下命令，看到一行绿色的 <code>+hexo</code> 代表安装成功了。</p>
+<blockquote>
+<p>cnpm install hexo-cli -g</p>
+</blockquote>
+<p>如果没有安装cnpm，可能会出现一些奇怪的问题。</p>
+<p>安装完成后可以通过以下命令来验证Hexo的版本：</p>
+<blockquote>
+<p>hexo -v</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Just-once/BlogImages/Img/image-20230311164000845.png"></p>
+<p>随后就可以进行初始化了，在博客文件夹的根目录下，必须是空文件夹，右键Git Bash Here打开，执行以下命令进行初始化操作。</p>
+<blockquote>
+<p>hexo init</p>
+</blockquote>
+<p>初始化过程中会从Github上拉取一些内容，可能会卡在<code>Install dependencies</code>那一行，这是正常的，如果卡住就按下<code>ctrl + c</code>结束，再用国内镜像进行安装，即输入以下指令：</p>
+<blockquote>
+<p>cnpm install</p>
+</blockquote>
+<h1 id="部署和调整博客"><a href="#部署和调整博客" class="headerlink" title="部署和调整博客"></a>部署和调整博客</h1><p>安装完成后，执行下列指令启动Hexo，会看到在<code>localhost: 4000</code>端口启动，接下来就可以在浏览器打开图中的链接从而访问你的博客啦。</p>
+<blockquote>
+<p>hexo s</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Just-once/BlogImages/Img/image-20230311164827861.png" alt="image-20230311164827861"></p>
+<p>当然，目前你的博客还空空如也，甚至都没有名字，那么就从修改主题开始进行美化，Hexo的主题可在<a target="_blank" rel="noopener" href="https://hexo.io/themes/">https://hexo.io/themes/</a> 里面找到，每个主题都包含预览效果、配置文件和下载地址三个部分，你可以打开项目主页进行下载，并按照Readme文件内容的提示进行相应的配置和修改，不过里面很多主题多多少少是存在些问题的，当使用<code>hexo s</code>出现bug或者页面打不开时，停止继续浪费时间，换个主题即可。</p>
+<p>当然你可以下载多个不同的主题，他们并不会冲突，都会保存到theme文件夹下，当然有一些主题的配置起来会比较麻烦，可以先选一个简单的项目学习一下，比如next主题、yilia主题，这些都是主流的问题较少的主题。其中next算是最受欢迎的主题了，它有详细的中文文档：<a target="_blank" rel="noopener" href="http://theme-next.iissnan.com/">NexT 使用文档 (iissnan.com)</a>，在这里不做详细介绍了，当然本人使用时出现了些问题，所以没有试验成功。</p>
+<p> 以本博客使用的yilia主题为例，在博客根目录下Git Bush Here，并执行以下指令将主题下载到<code>themes/yilia</code>文件夹下，当然这个名字是可以改，只是不建议这么做。如果出现下载失败或卡住的情况，可以直接在Github页面中的<code>Code</code>按键里面，点击下载zip压缩包，解压后修改名字，放到themes文件夹下也是可以的。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
+
+<p>接着，修改博客根目录下的 <code>_config.yml</code> ： <code>theme: yilia</code>，这里注意区分博客根目录下的配置文件和主题目录下的配置文件，虽然同名，但一个是配置博客的，一个是配置博客当前使用的主题内容的。随后就可以进行预览了，执行如下指令：</p>
+<blockquote>
+<p>hexo s</p>
+</blockquote>
+<p>完善的Hexo主题会在项目主页展示详细的配置文件修改方法。如果仍有疑问推荐阅读<a target="_blank" rel="noopener" href="https://www.cnblogs.com/huanhao/p/hexobase.html#github%E9%83%A8%E7%BD%B2">【基础篇】hexo博客搭建教程 - huanhao - 博客园 (cnblogs.com)</a>的6.1、6.2节学习，其中详细介绍了如何修改布局和修改语言。</p>
+<h2 id="创建博客"><a href="#创建博客" class="headerlink" title="创建博客"></a>创建博客</h2><p>【本节默认已经下载了Typora并且配置好了图床，图床的配置参考下一篇博客】</p>
+<p>现在我们可以进行博客的创建了，如果是按照上述步骤顺序完成，那么将会在个人主页看到一个Hello Word的默认博客，博客内容在<code>.\blog\source_posts\hello-world.md</code>中，可以用Typora打开看一下内容，同时强烈建议提前学习下markdown语法，为后续书写博客做准备，附上一个markdown语法的入门博客<a target="_blank" rel="noopener" href="https://www.cnblogs.com/huanhao/p/markdown.html">【hexo博客进阶】1.Markdown语法</a></p>
+<p>我们使用指令<code>hexo new</code>来新建一个博客，该指令会创建一个<code>文章名.md</code>文件到<code>.\blog\source\_posts</code>下，并按照一定的格式创建抬头内容。（引号可加可不加）</p>
+<blockquote>
+<p>hexo  new “博客名”</p>
+</blockquote>
+<p>创建完成后，就可以使用Typora打开md文件进行博客内容的编写啦，并通过执行指令<code>hexo s</code>重新启动hexo，即可看到hexo自动读取了文件内容，并展示在本地网页上了。</p>
+<h2 id="Github部署"><a href="#Github部署" class="headerlink" title="Github部署"></a>Github部署</h2><p>为什么要进行部署呢？因为前面创建的博客目前只能本地访问，还没有上传到网上，利用Github进行部署后，即可将本地内容以<code>html</code>的形式上传到一个云端仓库，这样只要用户联网，就可以通过链接访问你的博客了。</p>
+<p>Github可以部署一个免费的个人主页，首先我们在创建账号后，需要新建一个仓库，仓库名要和你的Github名字一样，并在后面加上<code>.github.io</code>，同时勾选初始化<code>README</code>选项，创建完成后点击<code>Settings –&gt; Pages</code>设置从一个分支创建。由于初始创建，应该是空的仓库，那么应该是基于main分支构建，我这里设置为master的原因是main分支部署了个人主页。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Just-once/BlogImages/Img/image-20230311214732961.png" alt="image-20230311214732961"></p>
+<p>接下来创建一个git秘钥，在任意位置打开Git Bash Here，执行如下指令，注意用自己的邮箱替换。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C “your_email@youremail.com“</span><br></pre></td></tr></table></figure>
+
+<p>然后执行</p>
+<blockquote>
+<p>cat ~&#x2F;.ssh&#x2F;id_rsa.pub</p>
+</blockquote>
+<p>会输出你的密钥，我们复制输出信息，然后打开Github，依次点击头像下的<code>Settings - SSH - New SSH Key</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Just-once/BlogImages/Img/image-20230312150007459.png" alt="image-20230312150007459"></p>
+<p>粘贴你复制的密钥</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Just-once/BlogImages/Img/image-20230312150036914.png" alt="image-20230312150036914"></p>
+<p>然后打开Git Bush Here，执行：</p>
+<blockquote>
+<p>ssh -T <a href="mailto:&#103;&#x69;&#x74;&#64;&#x67;&#105;&#116;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#x6d;">&#103;&#x69;&#x74;&#64;&#x67;&#105;&#116;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+</blockquote>
+<p>在需要输入<code>yes/no</code>的地方输入<code>yes</code>即可，然后回到项目，复制对应分支下<code>Code</code>中的SSH地址，将复制到的地址填写进博客目录下<code>_config.yml</code>的<code>deploy</code>项中即可。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Just-once/BlogImages/Img/image-20230312145359597.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Just-once/BlogImages/Img/image-20230311220104861.png" alt="image-20230311220104861"></p>
+<p>紧接着安装一个上传插件，执行上传指令即可上传到指定的Github仓库中。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 安装上传插件</span><br><span class="line">cnpm install hexo-deployer-git --save</span><br><span class="line"># 上传到github</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+
+<p>然后打开项目，点击<code>Settings</code>，往下找到<code>Github Pages</code>，点击<code>none</code>，选择<code>master branch</code>。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Just-once/BlogImages/Img/image-20230312150848830.png" alt="image-20230312150848830"></p>
+<p>铛铛铛，大功告成啦，现在你可以打开刚刚部署的网址：<a target="_blank" rel="noopener" href="https://just-once.github.io/">https://just-once.github.io/</a> 进行访问。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>以上就是使用Hexo搭建基于Github的个人主页全过程了，这是我的第一篇文章，以后将在此博客记录更多的学习内容，同时会不定期分享美食打卡、阅读笔记、旅游游记和个人心得等等，喜欢的话就赶快收藏本博客吧。</p>
+<p>最后，欢迎大家访问我的个人主页：<a target="_blank" rel="noopener" href="https://justonce.netlify.app/">Just-Once’s HomePage </a> 和个人博客：<a target="_blank" rel="noopener" href="https://just-once.github.io/">Just-Once’s Blogs</a>，感谢大家的喜欢和关注，您的赞赏是对我最大的支持和鼓励，后续将继续创作更多的优质内容，如有疑问请直接留言评论，欢迎大家积极转发，我们下次再见！</p>
+
+      
+      
+       
+         <div class="essayending">
+           <div>
+            <div style="text-align:center;color: #ccc;font-size:22px;">
+            <br/>
+            <br/>
+ -------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------
+            <br/>
+            <br/>
+             <br/>
+             <br/>
+            </div>
+           </div>
+         </div>
+         
+  
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wechatpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术积累</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">博客搭建</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/hexo//" class="article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/hexo/技术积累//" class="article-tag-list-link color5">技术积累</a>
+        			<a href="/categories/技术积累//" class="article-tag-list-link color5">技术积累</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2023/03/06/%E8%AE%B0%E5%BD%95%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2023/03/12/Typora%E9%85%8D%E7%BD%AEGithub%E5%9B%BE%E5%BA%8A/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Typora配置Github图床
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2023/03/05/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">软件安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Nodejs-Git"><span class="toc-number">2.1.</span> <span class="toc-text">Nodejs + Git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cnmp"><span class="toc-number">2.2.</span> <span class="toc-text">cnmp</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Typora%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-number">2.3.</span> <span class="toc-text">Typora（推荐）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Hexo"><span class="toc-number">3.</span> <span class="toc-text">安装Hexo</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E5%92%8C%E8%B0%83%E6%95%B4%E5%8D%9A%E5%AE%A2"><span class="toc-number">4.</span> <span class="toc-text">部署和调整博客</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2"><span class="toc-number">4.1.</span> <span class="toc-text">创建博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Github%E9%83%A8%E7%BD%B2"><span class="toc-number">4.2.</span> <span class="toc-text">Github部署</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-number">4.3.</span> <span class="toc-text">结语</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="记录使用Hexo搭建博客" data-title="记录使用Hexo搭建博客" data-url="http://example.com/2023/03/06/%E8%AE%B0%E5%BD%95%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "http://example.com/2023/03/06/%E8%AE%B0%E5%BD%95%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/", 
+    sourceId: "记录使用Hexo搭建博客",
+    productKey: "true",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
   
 
-    
+  
+  <div id="SOHUCS" sid="记录使用Hexo搭建博客" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+</script>
+  
+
+  
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'true'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+  
+
+  
 
 
           </div>
@@ -365,10 +701,10 @@
       	</div>
     </div>
     <div calss="count-span">
-      <span id="busuanzi_container_site_pv">
+      <span >
         总访问量: <span id="busuanzi_value_site_pv"></span>
       </span>
-      <span id="busuanzi_container_site_uv">
+      <span >
         总访客: <span id="busuanzi_value_site_uv"></span>
       </span>
     </div>
@@ -378,20 +714,22 @@
 <script type="text/javascript" src="/firework.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Justlovesmile/CDN/js/sakura.js"></script>
 <script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="https://github.com/hustcc/canvas-nest.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
 
     </div>
     <script>
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false,
-		toc_hide_index: true,
+		toc_hide_index: false,
 		root: "/",
-		innerArchive: false,
+		innerArchive: true,
 		showTags: false
 	}
 </script>
@@ -417,22 +755,89 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
       
     
+      
+      
+      
+    
     
 
     <ul style="width: 70%">
     
     
       
-      <li style="width: 50%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      
+        
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
   </div>
   <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">博客搭建</a>
+              </li>
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            3、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: false
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
+    	</section>
     
 
     
@@ -534,5 +939,9 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
   <script src="https://script-1256884783.file.myqcloud.com/cursor/explosion.min.js"></script>
   <!--pjax：防止跳转页面音乐暂停-->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script>
-</body>
+  <!--动态线条背景-->
+  <script type="text/javascript"
+   color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+  </script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
 </html>
